@@ -27,7 +27,7 @@ export default function Criteria() {
               {[
                 { label: "Revenue", value: "$5M – $50M" },
                 { label: "EBITDA", value: "$1M – $5M" },
-                { label: "Location", value: "United States" },
+                { label: "Location", value: "United States, with a focus on Tampa Bay, Florida" },
                 { label: "Business Model", values: ["Recurring or repeat customers", "Essential services", "Stable demand"] },
               ].map((item, i) => (
                 <div key={i} className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-8 pb-8 border-b border-white/5 last:border-0">

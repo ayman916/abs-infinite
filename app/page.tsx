@@ -87,7 +87,7 @@ export default function Home() {
               We typically acquire businesses with:
             </p>
             <ul className="mt-4 space-y-2 text-white/55 text-[17px]">
-              {["$1M – $5M EBITDA", "Recurring or essential revenue", "Strong local market presence", "Experienced operating teams", "Owners seeking retirement or transition"].map((item) => (
+              {["$1M – $5M EBITDA", "Recurring or essential revenue", "Strong local market presence", "Experienced operating teams", "Owners seeking retirement or transition", "United States, with a focus on the Tampa Bay, Florida region"].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/40 shrink-0" />
                   {item}
