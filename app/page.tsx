@@ -5,29 +5,44 @@ export default function Home() {
   return (
     <>
       {/* ─── HERO ─── */}
-      <section className="py-24 md:py-36">
-        <div className="max-w-3xl mx-auto px-6">
+      <section className="py-28 md:py-40 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,169,110,0.06),transparent_60%)]" />
+        <div className="relative max-w-3xl mx-auto px-6">
           <FadeIn>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-charcoal-900 leading-[1.15] tracking-tight">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-400/20 bg-gold-400/5 mb-8">
+              <div className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
+              <span className="text-gold-400 text-xs font-medium tracking-widest uppercase">
+                Actively Acquiring
+              </span>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.05}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.15] tracking-tight">
               We acquire and operate
               <br />
-              small businesses.
+              <span className="text-gold-400">small businesses.</span>
             </h1>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="mt-8 text-lg md:text-xl text-charcoal-500 leading-relaxed max-w-2xl">
+            <p className="mt-8 text-lg md:text-xl text-white/45 leading-relaxed max-w-2xl">
               ABS Infinite Capital partners with business owners seeking a thoughtful 
               transition of their companies. We invest in durable businesses with strong 
               teams, loyal customers, and long-term growth potential.
             </p>
           </FadeIn>
-          <FadeIn delay={0.2}>
-            <div className="mt-10">
+          <FadeIn delay={0.15}>
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="inline-block px-6 py-3 bg-charcoal-900 text-white text-sm font-medium rounded hover:bg-charcoal-800 transition"
+                className="px-7 py-3 bg-gradient-to-r from-gold-400 to-gold-600 text-navy-900 text-sm font-semibold rounded hover:opacity-90 transition"
               >
                 Submit an Opportunity
+              </Link>
+              <Link
+                href="/criteria"
+                className="px-7 py-3 border border-white/10 text-white/60 text-sm font-medium rounded hover:border-gold-400/30 hover:text-white transition"
+              >
+                Our Criteria
               </Link>
             </div>
           </FadeIn>
@@ -35,22 +50,22 @@ export default function Home() {
       </section>
 
       {/* ─── WHAT WE DO ─── */}
-      <section className="py-20 border-t border-charcoal-100">
+      <section className="py-20 border-t border-white/5">
         <div className="max-w-3xl mx-auto px-6">
           <FadeIn>
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-charcoal-900">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-white">
               What We Do
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="mt-6 text-charcoal-500 text-[17px] leading-relaxed">
+            <p className="mt-6 text-white/45 text-[17px] leading-relaxed">
               ABS Infinite Capital acquires established small businesses across the United States. 
               We focus on companies with strong operating histories, recurring customers, and 
               defensible market positions.
             </p>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <p className="mt-4 text-charcoal-500 text-[17px] leading-relaxed">
+            <p className="mt-4 text-white/45 text-[17px] leading-relaxed">
               Unlike traditional private equity firms, we are long-term owners who prioritize 
               operational continuity and sustainable growth. We do not acquire businesses to 
               restructure and resell them.
@@ -60,47 +75,33 @@ export default function Home() {
       </section>
 
       {/* ─── INVESTMENT FOCUS ─── */}
-      <section className="py-20 border-t border-charcoal-100 bg-charcoal-50/50">
+      <section className="py-20 border-t border-white/5 bg-navy-800/40">
         <div className="max-w-3xl mx-auto px-6">
           <FadeIn>
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-charcoal-900">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-white">
               Investment Focus
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="mt-6 text-charcoal-500 text-[17px] leading-relaxed">
+            <p className="mt-6 text-white/45 text-[17px] leading-relaxed">
               We typically acquire businesses with:
             </p>
-            <ul className="mt-4 space-y-2 text-charcoal-600 text-[17px]">
-              <li className="flex items-start gap-3">
-                <span className="mt-2 w-1 h-1 rounded-full bg-charcoal-300 shrink-0" />
-                $1M – $5M EBITDA
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-2 w-1 h-1 rounded-full bg-charcoal-300 shrink-0" />
-                Recurring or essential revenue
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-2 w-1 h-1 rounded-full bg-charcoal-300 shrink-0" />
-                Strong local market presence
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-2 w-1 h-1 rounded-full bg-charcoal-300 shrink-0" />
-                Experienced operating teams
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-2 w-1 h-1 rounded-full bg-charcoal-300 shrink-0" />
-                Owners seeking retirement or transition
-              </li>
+            <ul className="mt-4 space-y-2 text-white/55 text-[17px]">
+              {["$1M – $5M EBITDA", "Recurring or essential revenue", "Strong local market presence", "Experienced operating teams", "Owners seeking retirement or transition"].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/40 shrink-0" />
+                  {item}
+                </li>
+              ))}
             </ul>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <p className="mt-8 text-charcoal-500 text-[17px] leading-relaxed">
+            <p className="mt-8 text-white/45 text-[17px] leading-relaxed">
               Preferred industries:
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {["Home Services", "Automotive Services", "Specialty Distribution", "Essential B2B Services", "Industrial Services"].map((ind) => (
-                <span key={ind} className="px-3 py-1.5 text-sm text-charcoal-600 bg-white border border-charcoal-100 rounded">
+                <span key={ind} className="px-3 py-1.5 text-sm text-white/50 bg-white/[0.03] border border-white/5 rounded">
                   {ind}
                 </span>
               ))}
@@ -110,14 +111,14 @@ export default function Home() {
       </section>
 
       {/* ─── PHILOSOPHY ─── */}
-      <section className="py-20 border-t border-charcoal-100">
+      <section className="py-20 border-t border-white/5">
         <div className="max-w-3xl mx-auto px-6">
           <FadeIn>
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-charcoal-900">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-white">
               Our Philosophy
             </h2>
           </FadeIn>
-          <div className="mt-10 space-y-10">
+          <div className="mt-10 space-y-8">
             {[
               {
                 title: "Long-term ownership",
@@ -132,10 +133,10 @@ export default function Home() {
                 body: "We work closely with owners to ensure smooth transitions for employees and customers. The businesses we acquire were built by people who care — we honor that.",
               },
             ].map((item, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div>
-                  <h3 className="text-charcoal-900 font-medium text-lg">{item.title}</h3>
-                  <p className="mt-2 text-charcoal-500 text-[17px] leading-relaxed">{item.body}</p>
+              <FadeIn key={i} delay={i * 0.08}>
+                <div className="p-6 rounded-xl border border-white/5 bg-white/[0.02] hover:border-gold-400/10 transition">
+                  <h3 className="text-white font-medium text-lg">{item.title}</h3>
+                  <p className="mt-2 text-white/40 text-[17px] leading-relaxed">{item.body}</p>
                 </div>
               </FadeIn>
             ))}
@@ -144,35 +145,29 @@ export default function Home() {
       </section>
 
       {/* ─── WORK WITH US ─── */}
-      <section className="py-20 border-t border-charcoal-100 bg-charcoal-50/50">
+      <section className="py-20 border-t border-white/5 bg-navy-800/40">
         <div className="max-w-3xl mx-auto px-6">
           <FadeIn>
-            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-charcoal-900">
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-white">
               Work With Us
             </h2>
-            <p className="mt-6 text-charcoal-500 text-[17px] leading-relaxed">
+            <p className="mt-6 text-white/45 text-[17px] leading-relaxed">
               We welcome conversations with:
             </p>
-            <ul className="mt-4 space-y-2 text-charcoal-600 text-[17px]">
-              <li className="flex items-start gap-3">
-                <span className="mt-2 w-1 h-1 rounded-full bg-charcoal-300 shrink-0" />
-                Business owners considering a transition
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-2 w-1 h-1 rounded-full bg-charcoal-300 shrink-0" />
-                Brokers and intermediaries
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-2 w-1 h-1 rounded-full bg-charcoal-300 shrink-0" />
-                Advisors representing sellers
-              </li>
+            <ul className="mt-4 space-y-2 text-white/55 text-[17px]">
+              {["Business owners considering a transition", "Brokers and intermediaries", "Advisors representing sellers"].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-2 w-1 h-1 rounded-full bg-gold-400/40 shrink-0" />
+                  {item}
+                </li>
+              ))}
             </ul>
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="mt-10">
               <Link
                 href="/contact"
-                className="inline-block px-6 py-3 bg-charcoal-900 text-white text-sm font-medium rounded hover:bg-charcoal-800 transition"
+                className="inline-block px-7 py-3 bg-gradient-to-r from-gold-400 to-gold-600 text-navy-900 text-sm font-semibold rounded hover:opacity-90 transition"
               >
                 Start a Conversation
               </Link>

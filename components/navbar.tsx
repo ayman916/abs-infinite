@@ -16,10 +16,15 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-charcoal-100">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-900/90 backdrop-blur-sm border-b border-white/5">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-charcoal-900 font-serif text-lg font-semibold tracking-tight">
-          ABS Infinite
+        <Link href="/" className="flex items-center gap-2">
+          <span className="w-8 h-8 rounded bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-navy-900 font-serif font-bold text-sm">
+            A
+          </span>
+          <span className="text-white font-serif text-lg font-semibold tracking-tight">
+            ABS Infinite
+          </span>
         </Link>
 
         {/* Desktop */}
@@ -30,8 +35,8 @@ export function Navbar() {
               href={l.href}
               className={`transition ${
                 pathname === l.href
-                  ? "text-charcoal-900 font-medium"
-                  : "text-charcoal-400 hover:text-charcoal-700"
+                  ? "text-gold-400 font-medium"
+                  : "text-white/40 hover:text-white/70"
               }`}
             >
               {l.label}
@@ -40,7 +45,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="md:hidden text-charcoal-500">
+        <button onClick={() => setOpen(!open)} className="md:hidden text-white/50">
           <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5">
             {open ? <path d="M6 6l10 10M6 16L16 6" /> : <path d="M4 7h14M4 12h14M4 17h14" />}
           </svg>
@@ -48,13 +53,13 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-charcoal-100 bg-white px-6 py-4 space-y-3">
+        <div className="md:hidden border-t border-white/5 bg-navy-900 px-6 py-4 space-y-3">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block text-charcoal-500 hover:text-charcoal-900 text-sm"
+              className="block text-white/50 hover:text-gold-400 text-sm"
             >
               {l.label}
             </Link>

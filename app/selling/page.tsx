@@ -12,25 +12,24 @@ export default function Selling() {
     <section className="py-24 md:py-32">
       <div className="max-w-3xl mx-auto px-6">
         <FadeIn>
-          <h1 className="font-serif text-3xl md:text-5xl font-semibold text-charcoal-900 leading-tight">
+          <h1 className="font-serif text-3xl md:text-5xl font-semibold text-white leading-tight">
             Considering Selling
             <br />
             Your Business?
           </h1>
-          <p className="mt-8 text-charcoal-500 text-[17px] leading-relaxed">
+          <p className="mt-8 text-white/45 text-[17px] leading-relaxed">
             For many owners, selling a business represents decades of work and dedication. 
             We approach every transaction with respect for the legacy owners have built 
             and a genuine interest in continuing what they started.
           </p>
         </FadeIn>
 
-        {/* What to Expect */}
         <FadeIn delay={0.1}>
           <div className="mt-16">
-            <h2 className="font-serif text-xl font-semibold text-charcoal-900">
+            <h2 className="font-serif text-xl font-semibold text-white">
               What Owners Can Expect
             </h2>
-            <ul className="mt-6 space-y-4 text-charcoal-600 text-[17px]">
+            <ul className="mt-6 space-y-4 text-white/55 text-[17px]">
               {[
                 {
                   title: "Confidential discussions",
@@ -49,19 +48,18 @@ export default function Selling() {
                   desc: "We collaborate with owners to create a transition plan that works for employees, customers, and the business.",
                 },
               ].map((item, i) => (
-                <li key={i} className="pb-4 border-b border-charcoal-100 last:border-0">
-                  <div className="font-medium text-charcoal-800">{item.title}</div>
-                  <p className="mt-1 text-charcoal-500">{item.desc}</p>
+                <li key={i} className="pb-4 border-b border-white/5 last:border-0">
+                  <div className="font-medium text-white/80">{item.title}</div>
+                  <p className="mt-1 text-white/40">{item.desc}</p>
                 </li>
               ))}
             </ul>
           </div>
         </FadeIn>
 
-        {/* Process */}
         <FadeIn delay={0.15}>
           <div className="mt-16">
-            <h2 className="font-serif text-xl font-semibold text-charcoal-900">
+            <h2 className="font-serif text-xl font-semibold text-white">
               Typical Process
             </h2>
             <div className="mt-8 space-y-6">
@@ -73,12 +71,12 @@ export default function Selling() {
                 { step: "05", title: "Closing", desc: "We work with legal and financial advisors to execute the transaction and begin the transition." },
               ].map((item, i) => (
                 <div key={i} className="flex gap-6">
-                  <div className="text-sm text-charcoal-300 font-mono font-medium w-8 shrink-0 pt-0.5">
+                  <div className="text-sm text-gold-400/30 font-mono font-medium w-8 shrink-0 pt-0.5">
                     {item.step}
                   </div>
                   <div>
-                    <div className="font-medium text-charcoal-800">{item.title}</div>
-                    <p className="mt-1 text-charcoal-500 text-[15px] leading-relaxed">{item.desc}</p>
+                    <div className="font-medium text-white/80">{item.title}</div>
+                    <p className="mt-1 text-white/40 text-[15px] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -90,7 +88,7 @@ export default function Selling() {
           <div className="mt-16">
             <Link
               href="/contact"
-              className="inline-block px-6 py-3 bg-charcoal-900 text-white text-sm font-medium rounded hover:bg-charcoal-800 transition"
+              className="inline-block px-7 py-3 bg-gradient-to-r from-gold-400 to-gold-600 text-navy-900 text-sm font-semibold rounded hover:opacity-90 transition"
             >
               Start a Confidential Conversation
             </Link>

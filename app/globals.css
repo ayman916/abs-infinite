@@ -7,11 +7,22 @@ html {
 }
 
 body {
-  background: #fcfcfc;
-  color: #1a1a1f;
+  background: #0a0c10;
+  color: #ffffff;
 }
 
 ::selection {
-  background: rgba(44, 85, 69, 0.15);
-  color: #1a1a1f;
+  background: rgba(201, 169, 110, 0.3);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0c10;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a96e33;
+  border-radius: 3px;
 }
