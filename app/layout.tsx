@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: "ABS Infinite Solutions — Strategic Business Acquisitions",
-  description: "We acquire and operate established service businesses in Florida's Tampa Bay region. $500K+ EBITDA. Long-term ownership.",
+  title: "ABS Infinite Capital — We Acquire and Operate Small Businesses",
+  description: "ABS Infinite Capital acquires and operates established small businesses across the United States. Long-term ownership. Operational focus. Confidential discussions welcome.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">
         <Navbar />
-        <main>{children}</main>
+        <main className="pt-16">{children}</main>
         <Footer />
       </body>
     </html>
