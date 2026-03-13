@@ -144,6 +144,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── RELIABLE CLOSING ─── */}
+      <section className="py-20 border-t border-white/5 bg-navy-800/40">
+        <div className="max-w-3xl mx-auto px-6">
+          <FadeIn>
+            <h2 className="font-serif text-2xl md:text-3xl font-semibold text-white">
+              Reliable Closing Process
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p className="mt-6 text-white/45 text-[17px] leading-relaxed">
+              We understand the importance of certainty when selling a business. ABS Infinite 
+              is focused on executing transactions efficiently and professionally. Our process 
+              is designed to minimize disruption to the business while providing sellers with 
+              a clear and predictable path to closing.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <p className="mt-4 text-white/45 text-[17px] leading-relaxed">
+              We work closely with owners, brokers, and advisors to complete transactions 
+              with speed, transparency, and respect for confidentiality.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* ─── WORK WITH US ─── */}
       <section className="py-20 border-t border-white/5 bg-navy-800/40">
         <div className="max-w-3xl mx-auto px-6">

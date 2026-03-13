@@ -18,7 +18,10 @@ export function Footer() {
             <Link href="/contact" className="hover:text-gold-400 transition">Contact</Link>
           </div>
         </div>
-        <div className="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-white/20">
+        <div className="mt-8 text-center text-[13px] text-white/30 italic">
+          Confidential conversations welcome. Brokers and advisors may submit opportunities directly.
+        </div>
+        <div className="mt-6 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-white/20">
           <span>© {new Date().getFullYear()} ABS Infinite Capital. All rights reserved.</span>
           <a href="mailto:info@absinfinite.com" className="hover:text-gold-400 transition">
             info@absinfinite.com
